@@ -24,7 +24,7 @@ class Solution:
         return maxlength
 
 
-    def lengthOfLongestSubstring2(self, s: str = "ggububgvfk") -> int: # # O(n²)
+    def lengthOfLongestSubstring2(self, s: str = "ggububgvfk") -> int:
         # create hashmap; while looping forward add each elem to hashmap, if it does not already exist
         # if elem in hashmap (repeating char), set length of hashmap as maxlength if greater than prev substring
         # then clear prev occurrence and all elems before it; add current element
@@ -58,7 +58,7 @@ class Solution:
             return inlength
         return maxlength
 
-    def lengthOfLongestSubstring3(self, s: str = "abcabcbb") -> int:
+    def lengthOfLongestSubstring3(self, s: str = "abcabcbb") -> int: # O(n²)
         # add each elem to hashmap while looping forward, 
         # in inner loop, add elem to hashmap if it does not exist there
         # if elem exists (repaeating char), clear hashmap and break out of inner loop
