@@ -2,7 +2,7 @@
 from typing import List
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]: # O(n)
         diffs = dict() # diff: index
         for i, num in enumerate(nums):
             if num in diffs: # current num is a diff of a previous elem
@@ -10,7 +10,7 @@ class Solution:
             diff = target - num
             diffs[diff] = i # map diff of num from target and its index
 
-    def twoSumBruteForce(self, nums: List[int], target: int) -> List[int]:
+    def twoSumBruteForce(self, nums: List[int], target: int) -> List[int]: # O(n²)
         length = len(nums)
         for i in range(length-1):
             for j in range(i+1, length):
