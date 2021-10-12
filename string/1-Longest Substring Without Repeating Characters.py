@@ -19,7 +19,7 @@ class Solution:
                 sbstrng.remove(s[l])
                 l += 1
             sbstrng.add(s[r])
-            maxlength = max(maxlength, r - l + 1)
+            maxlength = max(maxlength, r - l + 1) # update maxlength if current window is longer
 
         return maxlength
 
@@ -28,7 +28,7 @@ class Solution:
         # create hashmap; while looping forward add each elem to hashmap, if it does not already exist
         # if elem in hashmap (repeating char), set length of hashmap as maxlength if greater than prev substring
         # then clear prev occurrence and all elems before it; add current element
-        # this approach is the sliding window, but using a complex and inefficient way to do the above clearing
+        # this approach is similar to the sliding window, but using a complex and inefficient way to do the above clearing
         # "abcabcbb", "dvdkdef", "nfpdmpi", "aab"
 
         if len(s) == 0:
