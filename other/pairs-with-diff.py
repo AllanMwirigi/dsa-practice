@@ -1,5 +1,5 @@
 # Given an array of distinct integer values, count the number of pairs of integers that
-# have difference k. F
+# have difference k.
 
 def countPairs(arr = [], k = 2):
     elem_set = set()

@@ -5,7 +5,7 @@ def findPowers2(n, result = []):
     if n <= 0:
         result.append(0)
     num = 1
-    while num < n:
+    while num <= n:
         result.append(num)
         num *= 2
 
@@ -24,5 +24,5 @@ def findPowers2Recursive(n):
     print(current)
     return current
 
-# findPowers2(100)
+# findPowers2(16)
 findPowers2Recursive(99)
