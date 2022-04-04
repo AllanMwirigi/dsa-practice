@@ -2,6 +2,7 @@
 # can only move down or right
 # in how many ways can you get to the goal in a grid of dimensions m * n
 
+# T - O(n * m)     S -> O(n + m)
 def gridTraveler(m, n, memo = dict()):
     key = str(m) + ',' + str(n)
     if key in memo: return memo[key]
@@ -10,7 +11,7 @@ def gridTraveler(m, n, memo = dict()):
     if m == 0 or n == 0: return 0 # grid is empty, no way to traverse
     if m == 1 and n == 1: return 1 # can only move one way
     # cannot move diagonally based on rules i.e. gridTraveler(m - 1, n - 1)
-    memo[key] =  gridTraveler(m - 1, n) + gridTraveler(m, n - 1)
+    memo[key] =  gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo)
     # memo[key2] = memo[key]
     return memo[key]
 
